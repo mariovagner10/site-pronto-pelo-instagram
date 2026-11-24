@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Pré-lançamento: tirar o noindex quando as vendas abrirem -->
+<meta name="robots" content="noindex">
+<title>Site Pronto pelo Instagram · Crie sites profissionais com IA, sem ser desenvolvedor</title>
+<meta name="description" content="Preste serviço de criação de sites sem ser desenvolvedor. Você capta o cliente e informa o @ do Instagram dele; a IA, já preparada pelo kit, monta o site, mostra a demonstração e hospeda. Referência: R$ 1.500 por site.">
+<meta property="og:title" content="Site Pronto pelo Instagram">
+<meta property="og:description" content="Crie sites profissionais com IA, sem ser desenvolvedor. Você informa o @ do cliente; a IA faz o resto.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og.png">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#161827; --ink2:#23263A; --light:#F7F4EE; --light2:#EDE6D9; --paper:#FFFDF8;
+  --accent:#E8553A; --accent-deep:#B83A1E; --accent-soft:#FF8A5B;
+  --muted:#4A4E5E; --muted-dark:#C9CBD6; --ok:#1E7A4C;
+  --radius:22px; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--light);color:var(--ink);font:17px/1.6 'Inter',system-ui,-apple-system,Segoe UI,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Space Grotesk','Inter',Arial,sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(38px,6.4vw,72px)}
+h2{font-size:clamp(30px,4.2vw,48px)}
+h3{font-size:22px;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.dark{background:var(--ink);color:var(--light)}
+.alt{background:var(--light2)}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:14px}
+.dark .eyebrow{color:var(--accent-soft)}
+.lead{font-size:clamp(18px,2.1vw,21px);color:var(--muted);max-width:760px}
+.dark .lead{color:var(--muted-dark)}
+.sec-head{max-width:820px;margin-bottom:44px}
+.sec-head .lead{margin-top:16px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--ink);font-weight:700;font-size:18px;text-decoration:none;padding:18px 30px;border-radius:999px;box-shadow:0 10px 26px rgba(232,85,58,.32);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(232,85,58,.4)}
+.btn-ghost{background:transparent;color:inherit;border:2px solid currentColor;box-shadow:none}
+.btn-ghost:hover{box-shadow:none}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+.dark .note{color:var(--muted-dark)}
+
+/* topo */
+.nav{position:sticky;top:0;z-index:20;background:rgba(22,24,39,.92);backdrop-filter:saturate(1.4) blur(8px);color:var(--light)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;font-size:19px;text-decoration:none}
+.brand span{color:var(--accent-soft)}
+.nav .btn{padding:10px 18px;font-size:15px;box-shadow:none}
+.hero{padding:72px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1 span{color:var(--accent-soft)}
+.hero .lead{margin:22px 0 34px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{background:var(--ink2);color:var(--light);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600}
+
+/* ilustração: Instagram -> site */
+.ilus{position:relative;height:460px}
+.phone{position:absolute;width:210px;height:420px;border-radius:34px;background:#0E0F1A;border:6px solid #2E3148;box-shadow:0 30px 60px rgba(0,0,0,.45);overflow:hidden}
+.phone.ig{left:0;top:30px;transform:rotate(-6deg)}
+.phone.site{right:0;top:0;transform:rotate(4deg)}
+.ig .bar{height:38px;display:flex;align-items:center;gap:8px;padding:0 12px;border-bottom:1px solid #23263A}
+.ig .av{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF)}
+.ig .handle{height:9px;width:80px;border-radius:5px;background:#3A3D55}
+.ig .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:3px}
+.ig .grid i{display:block;aspect-ratio:1;border-radius:3px}
+.site .s-top{height:150px;background:linear-gradient(160deg,#E8553A,#B83A1E);padding:16px 14px;display:flex;flex-direction:column;justify-content:flex-end}
+.site .s-top b{display:block;height:12px;width:120px;border-radius:6px;background:rgba(255,255,255,.9);margin-bottom:8px}
+.site .s-top em{display:block;height:8px;width:90px;border-radius:5px;background:rgba(255,255,255,.6)}
+.site .s-btn{margin:14px;height:30px;border-radius:999px;background:#F7F4EE}
+.site .s-row{margin:10px 14px;height:44px;border-radius:10px;background:#23263A}
+.arrow{position:absolute;left:50%;top:205px;transform:translateX(-50%);width:56px;height:56px;border-radius:50%;background:var(--accent);display:grid;place-items:center;box-shadow:0 10px 24px rgba(232,85,58,.45);z-index:2}
+.arrow svg{width:26px;height:26px}
+
+/* cards e grades */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--paper);border-radius:var(--radius);padding:30px;box-shadow:0 1px 0 rgba(22,24,39,.06)}
+.dark .card{background:var(--ink2)}
+.card p{color:var(--muted);margin-top:10px}
+.dark .card p{color:var(--muted-dark)}
+.num{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;color:var(--accent-deep);font-size:15px;letter-spacing:.08em}
+.dark .num{color:var(--accent-soft)}
+
+/* passos do serviço */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
+.step{background:var(--ink2);border-radius:var(--radius);padding:26px 22px}
+.step .num{display:block;margin-bottom:12px}
+.step h3{font-size:20px}
+.step p{color:var(--muted-dark);margin-top:8px;font-size:15.5px}
+.step.money{background:var(--accent);color:var(--ink)}
+.step.money .num,.step.money p{color:var(--ink)}
+
+/* prova */
+.proof{width:100%;border-collapse:collapse;background:var(--paper);border-radius:var(--radius);overflow:hidden}
+.proof th,.proof td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--light2);vertical-align:top}
+.proof th{background:var(--ink);color:var(--light);font-family:'Space Grotesk',Arial,sans-serif;font-size:16px}
+.proof td:first-child{font-weight:600;width:30%}
+.proof tr:last-child td{border-bottom:0}
+
+/* listas */
+.check{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.check li{position:relative;padding-left:36px}
+.check li::before{content:"";position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23161827' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/14px no-repeat}
+.check.no li::before{background:#C9CBD6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23161827' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E") center/12px no-repeat}
+.check b{color:var(--ink)}
+.dark .check b{color:var(--light)}
+
+/* oferta */
+.offer{background:var(--ink);color:var(--light);border-radius:30px;padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.offer .lead,.offer .note{color:var(--muted-dark)}
+.offer .eyebrow{color:var(--accent-soft)}
+.price-old{color:var(--muted-dark);text-decoration:line-through;font-size:20px}
+.price{font-family:'Space Grotesk',Arial,sans-serif;font-size:clamp(54px,7vw,76px);font-weight:700;line-height:1;margin:6px 0}
+.price small{font-size:22px;font-weight:500;color:var(--muted-dark)}
+.guarantee{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border-radius:var(--radius);padding:26px;margin-top:22px}
+.seal{flex:none;width:64px;height:64px;border-radius:50%;background:var(--ink);color:var(--light);display:grid;place-items:center;font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;line-height:1;text-align:center;font-size:13px}
+.seal b{font-size:24px;display:block}
+
+/* FAQ */
+.faq{display:grid;gap:12px;max-width:860px}
+details{background:var(--paper);border-radius:16px;padding:20px 24px}
+summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:'Space Grotesk',Arial,sans-serif;font-size:26px;line-height:1;color:var(--accent-deep)}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:12px}
+
+footer{background:var(--ink);color:var(--muted-dark);padding:44px 0;font-size:14px}
+footer .wrap{display:grid;gap:10px}
+footer b{color:var(--light)}
+
+/* aparecer ao rolar */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsivo */
+@media (max-width:980px){
+  .hero-grid,.offer{grid-template-columns:1fr}
+  .ilus{height:400px;max-width:420px;margin:0 auto;width:100%}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step.money{grid-column:1/-1}
+  .grid3{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:64px 0}
+  .hero{padding:44px 0 64px}
+  .grid2,.grid3,.steps{grid-template-columns:1fr}
+  .offer{padding:32px 22px}
+  .nav .btn{display:none}
+  .phone{width:170px;height:340px}
+  .ilus{height:360px}
+  .arrow{top:170px}
+  .proof,.proof tbody{display:block}
+  .proof tr{display:grid;grid-template-columns:1fr 1fr}
+  .proof th:first-child{display:none}
+  .proof td:first-child{grid-column:1/-1;width:auto;background:var(--light2);border-bottom:0;padding-bottom:6px}
+  .proof th,.proof td{padding:12px 14px;font-size:15px}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#topo">Site Pronto <span>pelo Instagram</span></a>
+    <a class="btn" href="#oferta">Quero o kit</a>
+  </div>
+</header>
+
+<!-- TOPO -->
+<section class="hero dark" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Kit + IA preparada + método de venda</p>
+      <h1>Preste serviço de criação de sites. <span>Sem ser desenvolvedor.</span></h1>
+      <p class="lead">É vibe coding sem precisar saber o que pedir: a IA já vem preparada pelo kit para fazer este tipo de site. Você capta o cliente e informa o @ do Instagram dele. A IA monta o site, mostra a demonstração pré-pronta e, depois que o cliente aprova, hospeda no domínio dele. Você cobra pelo site: referência de <b style="color:#F7F4EE">R$ 1.500 por site pronto</b>.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#oferta">Quero o kit</a>
+        <a class="btn btn-ghost" href="#como">Ver como funciona</a>
+      </div>
+      <div class="chips">
+        <span class="chip">Não precisa ser desenvolvedor</span>
+        <span class="chip">Não precisa estudar como se faz</span>
+        <span class="chip">Nenhum dado inventado</span>
+      </div>
+    </div>
+    <div class="ilus" aria-hidden="true">
+      <div class="phone ig">
+        <div class="bar"><span class="av"></span><span class="handle"></span></div>
+        <div class="grid">
+          <i style="background:#E8553A"></i><i style="background:#3A3D55"></i><i style="background:#F4B740"></i>
+          <i style="background:#2B6E8F"></i><i style="background:#B83A1E"></i><i style="background:#4A4E5E"></i>
+          <i style="background:#7A4FB5"></i><i style="background:#E8553A"></i><i style="background:#3A3D55"></i>
+          <i style="background:#F4B740"></i><i style="background:#2B6E8F"></i><i style="background:#B83A1E"></i>
+          <i style="background:#4A4E5E"></i><i style="background:#7A4FB5"></i><i style="background:#E8553A"></i>
+        </div>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#161827" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="phone site">
+        <div class="s-top"><b></b><em></em></div>
+        <div class="s-btn"></div>
+        <div class="s-row"></div><div class="s-row"></div><div class="s-row"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">A oportunidade</p>
+      <h2>Os pequenos negócios vivem no Instagram. O Google não acha nenhum deles.</h2>
+      <p class="lead">A barbearia, a hamburgueria e o salão do seu bairro têm foto bonita, cardápio, preço e horário, tudo espalhado em posts e no link da bio. Quando alguém procura no Google, não encontra nada. Fazer o site deles sempre deu trabalho de dias. O seu bairro está cheio de empresas assim, e você pode ser quem chega com o site já pronto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">A solução</p>
+      <h2>Você não precisa estudar como se faz um site. A IA já sabe.</h2>
+      <p class="lead">Vibe coding é criar software pedindo para a IA. Funciona, mas tem um problema: você precisa saber o que pedir. Que estrutura o site precisa ter, como testar no celular, como mostrar uma demonstração ao cliente, como hospedar, como ligar o domínio. O kit resolve essa parte: são as instruções testadas que deixam o <b>Claude Code</b>, o agente de programação da Anthropic, preparado para fazer este tipo de site do começo ao fim.</p>
+    </div>
+    <div class="grid3">
+      <div class="card reveal"><h3>Não precisa programar</h3><p>O agente escreve o código, instala o que falta (pedindo sua permissão) e explica cada etapa em português simples.</p></div>
+      <div class="card reveal"><h3>Não inventa nada</h3><p>Preço, endereço, horário: cada informação vem com a fonte de onde saiu. O que ele não acha vira pendência para você confirmar com o cliente.</p></div>
+      <div class="card reveal"><h3>Confere o próprio trabalho</h3><p>Tira prints no celular, no tablet e no computador, procura botão cortado e texto ilegível, e corrige antes de te mostrar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇO -->
+<section class="dark" id="como">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Como funciona o seu serviço</p>
+      <h2>Você vende o site. A IA faz o trabalho.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="num">01</span><h3>Capte o cliente</h3><p>Uma empresa que quer, ou precisa, de um site.</p></div>
+      <div class="step reveal"><span class="num">02</span><h3>Informe o @</h3><p>A IA lê o Instagram, o link da bio e o Google, e monta dois modelos de site.</p></div>
+      <div class="step reveal"><span class="num">03</span><h3>Demonstração</h3><p>O site pré-pronto num link do GitHub, para o cliente ver no celular e aprovar.</p></div>
+      <div class="step reveal"><span class="num">04</span><h3>Aprovou, no ar</h3><p>A IA hospeda o site no domínio do cliente, com HTTPS.</p></div>
+      <div class="step money reveal"><span class="num">05</span><h3>Você recebe</h3><p>Referência: <b>R$ 1.500</b> por site pronto, pago pelo seu cliente.</p></div>
+    </div>
+    <p class="note" style="margin-top:26px;max-width:760px">Ainda não tem cliente? O guia de vendas mostra como montar uma demonstração de uma empresa da sua região, gravar o vídeo do site no celular e oferecer pronto ao dono. R$ 1.500 é o que a FacilAPI cobra por esse tipo de site, com um ano de pequenos ajustes; o seu preço é você quem define.</p>
+  </div>
+</section>
+
+<!-- PROVA -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Testado em negócios reais</p>
+      <h2>Do Instagram ao site completo, com cada dado conferido</h2>
+    </div>
+    <div class="reveal" style="overflow-x:auto">
+      <table class="proof">
+        <tr><th></th><th>Barbearia (já tinha site)</th><th>Hamburgueria (sem site)</th></tr>
+        <tr><td>Tempo de trabalho da IA</td><td>cerca de 1h10</td><td>cerca de 1h45</td></tr>
+        <tr><td>De onde vieram os dados</td><td>Instagram, sistema de agendamento, site antigo e Google</td><td>Instagram, cardápio online, Linktree e Google</td></tr>
+        <tr><td>Conferência</td><td>18 preços batendo com o sistema de agendamento</td><td>28 itens batendo com o cardápio online</td></tr>
+        <tr><td>Dado inventado</td><td>nenhum</td><td>nenhum</td></tr>
+      </table>
+    </div>
+    <p class="note">O site se adapta ao ramo: a barbearia ganhou serviços e "Agendar"; a hamburgueria ganhou cardápio e "Fazer pedido".</p>
+  </div>
+</section>
+
+<!-- O QUE TEM DENTRO -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">O que você recebe</p>
+      <h2>A IA preparada e o método de venda</h2>
+    </div>
+    <div class="grid2">
+      <div class="card reveal"><span class="num">A IA PREPARADA</span><h3 style="margin-top:8px">Prompt Mestre</h3><p>As instruções testadas que guiam o agente do @ ao site no ar: site, conferência, demonstração no GitHub e hospedagem, com pontos de aprovação.</p></div>
+      <div class="card reveal"><span class="num">PARA VENDER</span><h3 style="margin-top:8px">Guia de vendas</h3><p>Que empresa abordar, quando falar, a primeira mensagem, o que dizer, as respostas para as objeções, o preço de referência e as condições de pagamento.</p></div>
+      <div class="card reveal"><span class="num">PARA MOSTRAR</span><h3 style="margin-top:8px">Vídeo de apresentação</h3><p>A IA grava o site rolando no celular, pronto para mandar pelo WhatsApp ao dono da empresa.</p></div>
+      <div class="card reveal"><span class="num">PASSO A PASSO</span><h3 style="margin-top:8px">Guia do curso em 8 módulos</h3><p>Da instalação ao site no ar, com a tabela "se algo der errado". As vídeo-aulas entram na área de membros.</p></div>
+      <div class="card reveal"><span class="num">ATENDIMENTO</span><h3 style="margin-top:8px">Mensagens e ajustes</h3><p>Mensagens prontas para o cliente (autorização, dados que faltam, demonstração, domínio, site no ar) e como pedir ajustes à IA.</p></div>
+      <div class="card reveal"><span class="num">SEMPRE ATUAL</span><h3 style="margin-top:8px">Atualizações do kit</h3><p>Cada melhoria do prompt chega para quem já comprou.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section>
+  <div class="wrap grid2" style="align-items:start">
+    <div class="reveal">
+      <p class="eyebrow">Para quem é</p>
+      <h2 style="margin-bottom:26px">É para você se…</h2>
+      <ul class="check">
+        <li>Quer prestar serviço de criação de sites para empresas, mesmo sem ser desenvolvedor.</li>
+        <li>Já tentou vibe coding e travou sem saber o que pedir à IA.</li>
+        <li>Faz social media ou atende pequenos negócios e quer oferecer site também.</li>
+        <li>Já faz sites e perde tempo com a parte repetitiva.</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Para quem não é</p>
+      <h2 style="margin-bottom:26px">Não é para você se…</h2>
+      <ul class="check no">
+        <li>Procura loja virtual, sistema com login ou site de várias páginas. O kit faz sites institucionais de uma página.</li>
+        <li>Não tem computador: o kit roda no computador, não no celular.</li>
+        <li>Quer usar fotos e dados de um negócio sem a autorização do dono.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REQUISITOS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Sem surpresa</p>
+      <h2>O que você precisa ter</h2>
+    </div>
+    <div class="grid2">
+      <div class="card reveal"><h3>Computador</h3><p>Windows 10 ou 11, ou macOS 13 ou mais novo, com 8 GB de RAM (16 GB é o ideal).</p></div>
+      <div class="card reveal"><h3>Programas gratuitos</h3><p>Google Chrome e Claude Code (e o Git, no Windows). O resto a IA instala para você, pedindo permissão.</p></div>
+      <div class="card reveal"><h3>Contas gratuitas</h3><p>GitHub, onde ficam a demonstração e o site (hospedagem gratuita), e o seu Instagram.</p></div>
+      <div class="card reveal"><h3>Assinatura do Claude, paga à parte</h3><p>O plano gratuito não inclui o Claude Code. O Pro (US$ 20/mês) serve para começar; para fazer sites toda semana, o recomendado é o Max (US$ 100/mês). Ou pague só pelo uso: nos testes, cerca de US$ 6 a 8 por site.</p></div>
+    </div>
+    <p class="note">O domínio do cliente (cerca de R$ 40 por ano em .com.br) é pago pelo cliente e fica no nome dele.</p>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section id="oferta">
+  <div class="wrap">
+    <div class="offer reveal">
+      <div>
+        <p class="eyebrow">Lote de lançamento</p>
+        <h2>Site Pronto pelo Instagram</h2>
+        <p class="lead" style="margin-top:14px">A IA preparada, o guia de vendas, o vídeo de apresentação, o guia do curso e as atualizações.</p>
+        <p class="note" style="margin-top:18px">Faça a conta: o kit custa R$ 197, e o Claude Max, US$ 100 por mês. Um site vendido paga os dois. O resultado depende de você: de quantas empresas aborda e de como conduz a conversa. O kit te dá a IA preparada e o método, não uma promessa de faturamento.</p>
+      </div>
+      <div>
+        <p class="price-old">de R$ 297</p>
+        <p class="price">R$ 197</p>
+        <p style="color:var(--muted-dark);margin-bottom:24px">ou em até 12x no cartão</p>
+        <a class="btn" style="width:100%" href="https://pay.kiwify.com.br/T4rDckJ">Quero o kit</a>
+        <p class="note">Pagamento seguro pela Kiwify. Acesso imediato depois da confirmação.</p>
+      </div>
+    </div>
+    <div class="guarantee reveal">
+      <div class="seal"><span><b>7</b>dias</span></div>
+      <div><h3>7 dias de garantia</h3><p style="color:var(--muted);margin-top:6px">Entre, instale e faça o seu primeiro site. Se em até 7 dias você achar que o kit não é para você, peça o reembolso pela Kiwify e devolvemos 100% do valor.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2>Dúvidas</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Preciso saber programar?</summary><p>Não. O agente escreve todo o código, e o kit já diz a ele o que fazer em cada etapa: você não precisa saber o que pedir. Você precisa saber instalar um programa, copiar um arquivo para uma pasta e conversar com o agente em português.</p></details>
+      <details><summary>É vibe coding?</summary><p>É, mas guiado. No vibe coding comum, você descreve o que quer e vai corrigindo até dar certo. Aqui, a IA já vem preparada para este tipo de site: a estrutura, a conferência no celular, a demonstração no GitHub e a hospedagem estão no kit. Você informa o @ e aprova.</p></details>
+      <details><summary>Quanto posso cobrar por site?</summary><p>A referência é R$ 1.500 por site pronto, que é o preço que a FacilAPI pratica, com um ano de pequenos ajustes. O guia de vendas traz as condições (à vista, parcelado e uma condição para os primeiros clientes). O preço final é você quem define.</p></details>
+      <details><summary>Preciso já ter clientes?</summary><p>Não. Você pode montar o site de uma empresa em modo demonstração, sem publicar nada, e oferecer pronto ao dono, com o vídeo do site no celular. O guia mostra que empresas escolher e a mensagem para falar com o dono.</p></details>
+      <details><summary>Quanto custa o Claude?</summary><p>O plano gratuito não inclui o Claude Code. O Pro custa US$ 20 por mês e serve para começar; o Max, US$ 100 por mês, é o recomendado para quem faz sites toda semana. O valor em reais depende do câmbio e do IOF do seu cartão.</p></details>
+      <details><summary>Quanto tempo leva para fazer um site?</summary><p>Nos testes, a IA trabalhou de 1h10 a 1h45 por site, incluindo coleta, dois modelos e conferência. Some o seu tempo para aprovar cada etapa e falar com o cliente. A primeira vez, com a instalação, leva mais.</p></details>
+      <details><summary>E se o negócio não tiver site nenhum?</summary><p>É o caso mais comum, e foi testado: a hamburgueria do teste não tinha site. A IA usou o Instagram, o cardápio online do link da bio e o Google.</p></details>
+      <details><summary>Posso usar o Instagram de qualquer negócio?</summary><p>Só de quem autorizou, ou em modo demonstração, que monta o site no seu computador e não publica nada até o dono dizer sim. O kit traz a mensagem pronta para pedir a autorização.</p></details>
+      <details><summary>A minha conta do Instagram corre algum risco?</summary><p>A IA só visualiza o perfil do cliente, devagar, como uma pessoa faria: não curte, não segue e não posta. Se o Instagram pedir uma verificação, ela para e te avisa. Recomendamos ativar a verificação em duas etapas.</p></details>
+      <details><summary>Onde o site fica hospedado?</summary><p>No GitHub Pages, que é gratuito, com o domínio do cliente. Se você preferir, a IA também publica na Netlify ou no Cloudflare Pages.</p></details>
+      <details><summary>Funciona no Mac?</summary><p>Sim: Windows 10 ou 11 e macOS 13 ou mais novo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:28px">
+      <p class="eyebrow">Quem fez o kit</p>
+      <h2>Mario · FacilAPI</h2>
+      <p class="lead">Faço sites para pequenos negócios. Transformei o meu método num kit e testei em negócios reais, ajustando o kit com o que cada teste mostrou.</p>
+    </div>
+    <a class="btn" href="#oferta">Quero o kit</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Site Pronto pelo Instagram</b> · FacilAPI</p>
+    <p>Funciona com o Claude Code, da Anthropic, mas não é um produto oficial nem tem parceria com a Anthropic ou com a Meta (Instagram). Claude é marca da Anthropic; Instagram é marca da Meta. Resultados dependem de cada pessoa; o preço de referência não é promessa de ganho.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
